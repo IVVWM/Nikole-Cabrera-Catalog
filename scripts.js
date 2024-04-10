@@ -24,15 +24,15 @@
  */
 
 
-const FRESH_PRINCE_URL = "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+const Frieren_URL = "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,width=1200,height=675,fit=contain,quality=85/catalog/crunchyroll/ea075b926e1073f4eb016bff8cdb434c.jpe";
+const Chainsaw_Man_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmbuemozFRy81JDddZLqG1I9fBMemX5JHBpNdBDws65g&s";
+const Corey_Sama_URL = "https://static.wikia.nocookie.net/disney/images/4/49/Watch_Cory_on_Disney.jpg/revision/latest?cb=20180308214353";
 
 // This is an array of strings (TV show titles)
 let titles = [
-    "Fresh Prince of Bel Air",
-    "Curb Your Enthusiasm",
-    "East Los High"
+    "Chainsaw Man",
+    "Frieren: Beyond Journey's end",
+    "Corey in the House"
 ];
 // Your final submission should have much more data than this, and 
 // you should use more than just an array of strings to store it all.
@@ -51,11 +51,11 @@ function showCards() {
         // own data, you'll need to do something totally different here.
         let imageURL = "";
         if (i == 0) {
-            imageURL = FRESH_PRINCE_URL;
+            imageURL = Frieren_URL;
         } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
+            imageURL = Chainsaw_Man_URL;
         } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
+            imageURL = Corey_Sama_URL;
         }
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
@@ -79,13 +79,45 @@ function editCardContent(card, newTitle, newImageURL) {
     // select "Inspect", then click on the "Console" tab
     console.log("new card:", newTitle, "- html: ", card);
 }
+function Reccomend_anime(){
+    console.log("Button Clicked!")
+    const Input_price = prompt("How much are ya willing to pay for a monthly anime");
+
+    const price = parseFloat(Input_price);
+
+    if(isNaN(price)){
+        alert("https://www.youtube.com/watch?v=i8ju_10NkGY")
+        return;
+    }
+    let reccomendation = "";
+    
+    if(price <= 7.99){
+        reccomendation = "https://www.youtube.com/watch?v=i8ju_10NkGY";
+        alert(reccomendation)
+    }
+    else if(price >= 7.99 && price < 8.99){
+        reccomendation = "Get Hulu: https://www.hulu.com/plan-builder"
+        alert(reccomendation)
+    }else if (price >= 8.99 && price < 14.99){
+        reccomendation = "Get Crunchyroll: https://www.crunchyroll.com/premium"
+        alert(reccomendation)
+    }else{
+        reccomendation = "Honestly go with your heart"
+        alert(reccomendation)
+    }
+    console.log(Reccomend_anime(reccomendation));
+}
 
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 
 function quoteAlert() {
     console.log("Button Clicked!")
-    alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
+    alert("Try Clicking on the Bean button for a suprise!!!");
+}
+//below button made by myself outputs a suprise pic of Makima as a bean
+function Makima_Buttoon(){
+    console.log("Button Clicked!")
 }
 
 function removeLastCard() {

@@ -2,38 +2,54 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
+    <title>Anime | Home</title>
+    <meta name="description" content="A Catalog of Anime Nikole Watched this Spring Break =^.^=">
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
     <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
+        <h1 class="title">Anime Nikole Watched over Spring Break</h1>
     </header>
     <div id="card-container">
         
     </div>
     <div class="card" style="display: none;">
         <div class="card-content">
-            <h2>TV Show Title</h2>
+            <h2>Anime Title</h2>
             <img src="" alt="TV Show Poster">
             <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
+            
             </ul>
         </div>
     </div>
     <div class="footer">
+        </button>
         <button onclick="quoteAlert();">
-            Get A Quote!
+            Click Here!
         </button>
         <button onclick="removeLastCard();">
             Remove A Card!
         </button>
+        <button onclick="Reccomend_anime();">
+            subscription info
+        </button>
+        <button id="show-image-button">Bean</button>
+        <img id="my-image" src="https://pbs.twimg.com/profile_images/1618856726828048387/cyPjeoto_200x200.jpg" class="hidden">
+        <style>
+        .hidden { display: none; }
+        .visible { display: block; }
+         </style>
+        <script>
+        const showImageButton = document.getElementById("show-image-button");
+        const myImage = document.getElementById("my-image");
+        showImageButton.addEventListener("click", () => { 
+            myImage.classList.toggle("visible"); 
+            });
+        
+            
+
+        </script>
     </div>
 </body>
-
-</html>
